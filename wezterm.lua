@@ -8,14 +8,21 @@ local windowsPlatform = require("windows-platform")
 
 -- UI
 config.color_scheme = "Monokai Soda"
-
+config.window_padding = {
+	left = "1cell",
+	right = "1cell",
+	top = "20cell",
+	bottom = "20cell",
+}
 -- config.font = wezterm.font("Fragment Mono")
-config.font = wezterm.font("CaskaydiaCove Nerd Font")
+-- config.font = wezterm.font("CaskaydiaCove Nerd Font")
+config.font = wezterm.font("JetBrains Mono")
 config.font_size = 12
 
 -- UI.TabBar
-config.use_fancy_tab_bar = true
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.use_fancy_tab_bar = false
+-- config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+-- config.window_decorations = "TITLE|RESIZE"
 config.hide_tab_bar_if_only_one_tab = false
 config.tab_bar_at_bottom = true
 config.default_workspace = "main"
