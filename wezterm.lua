@@ -8,23 +8,26 @@ local windowsPlatform = require("windows-platform")
 
 -- UI
 config.color_scheme = "Monokai Soda"
-config.window_padding = {
-	left = "1cell",
-	right = "1cell",
-	top = "20cell",
-	bottom = "20cell",
-}
+-- config.window_padding = {
+-- 	left = "1cell",
+-- 	right = "1cell",
+-- 	top = "1cell",
+-- 	bottom = "1cell",
+-- }
 -- config.font = wezterm.font("Fragment Mono")
 -- config.font = wezterm.font("CaskaydiaCove Nerd Font")
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font("Fira Code Retina")
 config.font_size = 12
 
 -- UI.TabBar
-config.use_fancy_tab_bar = false
--- config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.use_fancy_tab_bar = true
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.window_frame = {
+	font_size = 12.0,
+}
 -- config.window_decorations = "TITLE|RESIZE"
 config.hide_tab_bar_if_only_one_tab = false
-config.tab_bar_at_bottom = true
+config.tab_bar_at_bottom = false
 config.default_workspace = "main"
 config.max_fps = 200
 
@@ -41,50 +44,50 @@ else
 end
 
 local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
-local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+-- local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+--
+-- tabline.setup({
+-- 	options = {
+-- 		icons_enabled = true,
+-- 		theme = "Monokai Remastered",
+-- 		color_overrides = {},
+-- 		section_separators = {
+-- 			left = wezterm.nerdfonts.pl_left_hard_divider,
+-- 			right = wezterm.nerdfonts.pl_right_hard_divider,
+-- 		},
+-- 		component_separators = {
+-- 			left = wezterm.nerdfonts.pl_left_soft_divider,
+-- 			right = wezterm.nerdfonts.pl_right_soft_divider,
+-- 		},
+-- 		tab_separators = {
+-- 			left = wezterm.nerdfonts.pl_left_hard_divider,
+-- 			right = wezterm.nerdfonts.pl_right_hard_divider,
+-- 		},
+-- 	},
+-- 	sections = {
+-- 		tabline_a = { "mode" },
+-- 		tabline_b = { "workspace" },
+-- 		tabline_c = { " " },
+-- 		tab_active = {
+-- 			"index",
+-- 			{ "parent", padding = 0 },
+-- 			"/",
+-- 			{ "cwd", padding = { left = 0, right = 1 } },
+-- 			{ "process", icons_only = true },
+-- 			-- process_to_icon = {
+-- 			-- 	["git"] = wezterm.nerdfonts.dev_git,
+-- 			-- },
+-- 			{ "zoomed", padding = 0 },
+-- 		},
+-- 		tab_inactive = { "index", { "process", padding = { left = 0, right = 1 } } },
+-- 		tabline_x = {},
+-- 		tabline_y = { "datetime", "battery" },
+-- 		tabline_z = { "hostname" },
+-- 	},
+-- 	extensions = {},
+-- })
 
-tabline.setup({
-	options = {
-		icons_enabled = true,
-		theme = "Monokai Remastered",
-		color_overrides = {},
-		section_separators = {
-			left = wezterm.nerdfonts.pl_left_hard_divider,
-			right = wezterm.nerdfonts.pl_right_hard_divider,
-		},
-		component_separators = {
-			left = wezterm.nerdfonts.pl_left_soft_divider,
-			right = wezterm.nerdfonts.pl_right_soft_divider,
-		},
-		tab_separators = {
-			left = wezterm.nerdfonts.pl_left_hard_divider,
-			right = wezterm.nerdfonts.pl_right_hard_divider,
-		},
-	},
-	sections = {
-		tabline_a = { "mode" },
-		tabline_b = { "workspace" },
-		tabline_c = { " " },
-		tab_active = {
-			"index",
-			{ "parent", padding = 0 },
-			"/",
-			{ "cwd", padding = { left = 0, right = 1 } },
-			{ "process", icons_only = true },
-			-- process_to_icon = {
-			-- 	["git"] = wezterm.nerdfonts.dev_git,
-			-- },
-			{ "zoomed", padding = 0 },
-		},
-		tab_inactive = { "index", { "process", padding = { left = 0, right = 1 } } },
-		tabline_x = {},
-		tabline_y = { "datetime", "battery" },
-		tabline_z = { "hostname" },
-	},
-	extensions = {},
-})
-
-tabline.apply_to_config(config)
+-- tabline.apply_to_config(config)
 
 -- local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
 -- bar.apply_to_config(config, {
