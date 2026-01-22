@@ -24,6 +24,7 @@ config.use_fancy_tab_bar = true
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_frame = {
 	font_size = 12.0,
+	font = wezterm.font({ family = "Fira Code", weight = "Bold" }),
 }
 -- config.window_decorations = "TITLE|RESIZE"
 config.hide_tab_bar_if_only_one_tab = false
