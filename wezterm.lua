@@ -6,6 +6,13 @@ local config = wezterm.config_builder()
 local unixPlatform = require("unix-platform")
 local windowsPlatform = require("windows-platform")
 
+config.term = "wezterm"
+config.window_background_opacity = 0.9
+config.inactive_pane_hsb = {
+	-- hue = 0.0,
+	-- saturation = 0.75,
+	brightness = 0.5,
+}
 -- UI
 config.color_scheme = "Monokai Soda"
 -- config.window_padding = {
